@@ -44,6 +44,7 @@ The main software source of truth.
 | CI | https://github.com/palthol/TU-api/blob/develop/.github/workflows/ci.yml |
 | Waiver guards | https://github.com/palthol/TU-api/blob/develop/.github/workflows/waiver-guards.yml |
 | Enrollment CLI PR | https://github.com/palthol/TU-api/pull/69 |
+| Placeholder participants PR (open, into `develop`) | https://github.com/palthol/TU-api/pull/72 |
 | Billing cron worker (off) | https://github.com/palthol/TU-api/blob/develop/workers/billing-cron/README.md |
 
 ## [TU-Administrative](https://github.com/palthol/TU-Administrative) (`develop`)
@@ -60,6 +61,7 @@ Staff apps. No backend.
 | Receipts map | https://github.com/palthol/TU-Administrative/blob/develop/docs/frontend-design/receipts-app.md |
 | Waiver viewer map | https://github.com/palthol/TU-Administrative/blob/develop/docs/frontend-design/waiver-viewer.md |
 | Dashboard env names | https://github.com/palthol/TU-Administrative/blob/develop/apps/dashboard/.env.example |
+| Enrollment board PR (open, into `develop`) | https://github.com/palthol/TU-Administrative/pull/18 |
 
 Domains: `admin.templeunderground.com`, `finance.templeunderground.com`, `waiverviewer.templeunderground.com`.
 
@@ -107,4 +109,6 @@ TU-api `AGENTS.md` also names marketing repos (`TU-web`, `TU-marketing`). They a
 
 ## Could not verify
 
-See [environments.md](environments.md) and [placeholder-enrollment.md](flows/placeholder-enrollment.md) for `TODO: verify` items (Terpsichora hosted project ref, Render auto-deploy branch, current pause state, placeholder PR numbers, Signup custom domain, dashboard/signup local port overlap).
+See [environments.md](environments.md) for remaining `TODO: verify` items (Terpsichora hosted project ref, Render auto-deploy branch, current pause state, Signup custom domain, dashboard/signup local port overlap).
+
+Placeholder enrollment PRs (open into `develop`, not merged; GitHub Actions billing lock so CI has not run): [TU-api #72](https://github.com/palthol/TU-api/pull/72), [TU-Administrative #18](https://github.com/palthol/TU-Administrative/pull/18).

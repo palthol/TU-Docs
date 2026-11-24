@@ -66,4 +66,4 @@ See [docs/runbooks/release-develop-to-main.md](docs/runbooks/release-develop-to-
 2. **Scheduling** — class catalog, per-session notes and videos, staff booking (**in progress** on TU-api `develop`).
 3. **Member-facing apps** — a future member portal; Terpsichora is expected to share login with that portal later.
 
-Placeholder participants and enrollment (walk-ins who can book before signing the new waiver) are a current in-progress slice. See [docs/flows/placeholder-enrollment.md](docs/flows/placeholder-enrollment.md).
+Placeholder participants and enrollment (walk-ins who can book before signing the new waiver) are a current in-progress slice: [TU-api #72](https://github.com/palthol/TU-api/pull/72) and [TU-Administrative #18](https://github.com/palthol/TU-Administrative/pull/18) (both into `develop`, not merged; GitHub Actions billing lock so CI has not run). See [docs/flows/placeholder-enrollment.md](docs/flows/placeholder-enrollment.md).

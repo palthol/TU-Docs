@@ -32,4 +32,4 @@ Day-to-day gym work is **GitHub Issues** in TU-Operations, not PRs, unless the c
 - [TU-api current-state.md](https://github.com/palthol/TU-api/blob/develop/docs/current-state.md) — what is verified
 - [TU-api deployment.md](https://github.com/palthol/TU-api/blob/develop/docs/deployment.md) — Discord digest cron (Dashboard steps; live job **TODO: verify**)
 - [TU-api validation-environment.md](https://github.com/palthol/TU-api/blob/develop/docs/validation-environment.md) — local-only smokes
-- [placeholder enrollment flow](../flows/placeholder-enrollment.md) — **in progress**
+- [placeholder enrollment flow](../flows/placeholder-enrollment.md) — **in progress** ([TU-api #72](https://github.com/palthol/TU-api/pull/72), [TU-Administrative #18](https://github.com/palthol/TU-Administrative/pull/18); CI blocked by GitHub Actions billing lock)

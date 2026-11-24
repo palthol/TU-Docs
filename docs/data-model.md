@@ -40,7 +40,7 @@ erDiagram
 
 | Entity | Role |
 | --- | --- |
-| `participants` | The person who trains (identity). Placeholder flags are planned — see [placeholder-enrollment.md](flows/placeholder-enrollment.md). |
+| `participants` | The person who trains (identity). Placeholder flags are in [TU-api #72](https://github.com/palthol/TU-api/pull/72) (open into `develop`) — see [placeholder-enrollment.md](flows/placeholder-enrollment.md). |
 | `waivers` | One signed submission (a person may have several over time) |
 | `emergency_contacts` | Per submission |
 | `waiver_medical_histories` | Per submission |

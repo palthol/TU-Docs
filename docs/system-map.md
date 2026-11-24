@@ -96,6 +96,6 @@ Vercel **preview** URLs cannot use the host-only `__Host-tu_admin_session` cooki
 | Public `GET /api/calendar/classes` | In-repo on `develop`; production apply of scheduling v2 migrations is gated |
 | Staff booking, waitlist, 3-hour late cancel, check-in, no-show | In-repo on `develop`; **not** production-applied |
 | Billing cron / Cloudflare Worker | **Off** (`triggers.crons` empty; Worker not deployed) |
-| Placeholder enrollment | **In progress, not yet merged** — [placeholder-enrollment.md](flows/placeholder-enrollment.md) |
+| Placeholder enrollment | **In progress** — [TU-api #72](https://github.com/palthol/TU-api/pull/72) and [TU-Administrative #18](https://github.com/palthol/TU-Administrative/pull/18) into `develop`, not merged. GitHub Actions billing lock: CI has not run. [Flow](flows/placeholder-enrollment.md) |
 
 Verified hosting inventory: [TU-api deployment.md](https://github.com/palthol/TU-api/blob/develop/docs/deployment.md) (read-only check dated 2026-09-05). Render Dashboard service ID and auto-deploy branch: **TODO: verify** (API docs could not read the Render account).

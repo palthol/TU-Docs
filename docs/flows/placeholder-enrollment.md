@@ -1,9 +1,15 @@
 # Placeholder participants and enrollment
 
-**Status: in progress — not yet merged.**  
-**Checked:** 2026-11-24. No open pull requests and no `is_placeholder` / `enrollment-board` hits on TU-api `main` (GitHub code search indexes the default branch) or TU-Administrative `main`. **TODO: verify** PR numbers and branch names when the work is opened or merged.
+**Status: in progress — open PRs into `develop`, not merged.**
 
-This page describes the **intended** slice so singh and later PRs share one picture. Treat routes and columns as the design until they land on `develop`.
+| Repo | PR | Base | Merged? |
+| --- | --- | --- | --- |
+| TU-api | [#72 Placeholder participants and no-charge enrollment](https://github.com/palthol/TU-api/pull/72) | `develop` | No |
+| TU-Administrative | [#18 Add Enrollment board and placeholder subscription enrollment](https://github.com/palthol/TU-Administrative/pull/18) | `develop` | No |
+
+**CI:** GitHub Actions is currently blocked by an **account billing lock**, so CI has not run on these PRs yet.
+
+This page summarizes that slice. Treat routes and columns as the PR contracts until they land on `develop`.
 
 ## Why
 
@@ -26,11 +32,11 @@ On `participants`:
 
 Placeholders **may** book and check in **before** signing the new waiver. They stay flagged in every staff UI that lists people.
 
-**TODO: verify** exact column types and check constraints when the migration file exists.
+Migration on #72 (in-repo only): `20261124120000_placeholder_participants.sql`. Unknown DOB is stored as the stand-in date `1900-01-01` via `placeholder_date_of_birth()`. Email may be null for name-only members.
 
 ## Intended API
 
-Admin-authenticated (cookie `__Host-tu_admin_session` and/or `x-admin-key`; RBAC **TODO: verify** — likely `owner` / `front_desk` write, `finance` read).
+Admin-authenticated (cookie `__Host-tu_admin_session` and/or `x-admin-key`). Per [TU-api #72](https://github.com/palthol/TU-api/pull/72): placeholder **writes** are `owner` and `front_desk` (`finance` → `403`); enrollment-board **reads** are `owner`, `finance`, and `front_desk`; existing-person enroll writes are `owner`, `finance`, and `front_desk`.
 
 | Route | Job |
 | --- | --- |
@@ -48,7 +54,7 @@ Enrollment section:
 2. **Create placeholder and enroll** — placeholder POST, optional plan
 3. **Enroll existing person** — `POST /api/admin/billing/subscriptions` for someone already in People
 
-Current `develop` dashboard is People / Today / Classes / Billing / More; it does **not** yet ship this Enrollment section on `main`. **TODO: verify** against the feature branch when it exists (`noble-6/finance-roster-enrollment-171a` is a related receipts/enrollment-adjacent branch — **TODO: verify** whether it includes placeholders).
+That Enrollment section is in [TU-Administrative #18](https://github.com/palthol/TU-Administrative/pull/18), not on `develop` or `main` yet. Current `develop` dashboard remains People / Today / Classes / Billing / More.
 
 ## Sequence (create placeholder and optionally enroll)
 
@@ -100,9 +106,11 @@ CLI details: [TU-api #69](https://github.com/palthol/TU-api/pull/69) and [subscr
 
 ## PR status log
 
+Checked 2026-11-24.
+
 | Repo | PR | State |
 | --- | --- | --- |
-| TU-api | **TODO: verify** | Not found open as of 2026-11-24; not on default-branch search |
-| TU-Administrative | **TODO: verify** | Same |
+| TU-api | [#72](https://github.com/palthol/TU-api/pull/72) | Open into `develop`, not merged. CI has not run (GitHub Actions account billing lock). |
+| TU-Administrative | [#18](https://github.com/palthol/TU-Administrative/pull/18) | Open into `develop`, not merged. Depends on #72's routes. Same billing-lock CI gap. |
 
-When PRs open, add them here and keep this flow marked **in progress** until both are merged to `develop` and released per [release-develop-to-main.md](../runbooks/release-develop-to-main.md).
+Keep this flow marked **in progress** until both are merged to `develop` and released per [release-develop-to-main.md](../runbooks/release-develop-to-main.md).
